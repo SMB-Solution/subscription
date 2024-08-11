@@ -1,5 +1,10 @@
-app_name = "subscription"
-app_title = "subscription"
+# -*- coding: utf-8 -*-
+from __future__ import unicode_literals
+from . import __version__ as app_version
+
+
+app_name = "Subscription"
+app_title = "Subscription"
 app_publisher = "SMB"
 app_description = "License Subscription"
 app_email = "info@smb.com"
@@ -227,3 +232,26 @@ app_license = "mit"
 # 	"Logging DocType Name": 30  # days to retain logs
 # }
 
+user_data_fields = [
+	{
+		"doctype": "{doctype_1}",
+		"filter_by": "{filter_by}",
+		"redact_fields": ["{field_1}", "{field_2}"],
+		"partial": 1,
+	},
+	{
+		"doctype": "{doctype_2}",
+		"filter_by": "{filter_by}",
+		"partial": 1,
+	},
+	{
+		"doctype": "{doctype_3}",
+		"strict": False,
+	},
+	{
+		"doctype": "{doctype_4}"
+	}
+]
+
+# on_login= "subscription.validate_license"
+on_session_creation= "subscription.validate_license"
