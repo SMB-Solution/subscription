@@ -4,7 +4,7 @@ authors = [
     { name = "SMB", email = "info@smb.com"}
 ]
 description = "License Subscription"
-requires-python = ">=3.10"
+requires-python = ">=3.8"
 readme = "README.md"
 dynamic = ["version"]
 dependencies = [
